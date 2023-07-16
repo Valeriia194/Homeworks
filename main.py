@@ -1,98 +1,33 @@
+import json
+
 if __name__ == "__main__":
 
-    # # Task 1
+    # # Task 1+2
+    # with open ('products.json') as f:
+    #     products = json.load(f)
     #
-    # DayOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    # flag = True
+    # products.sort(key=lambda x : x['price'])
+    # print(products)
     #
-    # while flag:
-    #     day = int(input("Enter the number of day (from 1 to 7): "))
-    #     if 0 <= day <= 7:
-    #         print("It's ", DayOfWeek[day - 1])
-    #         flag = False
-    #     else:
-    #         print("Wrong number, try again!")
+    # expensiveProducts = []
+    # for product in products:
+    #     if product['price'] >= 400:
+    #         expensiveProducts.append(product)
+    # print(expensiveProducts)
 
-
-    # # Task 2
-    #
-    # months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
-    #           'October', 'November', 'December']
-    # flag = True
-    #
-    # while flag:
-    #     monthNum = int(input("Enter the number of month (from 1 to 12): "))
-    #     if 0 <= monthNum <= 12:
-    #         print("It's ", months[monthNum - 1])
-    #         flag = False
-    #     else:
-    #         print("Wrong number, try again!")
-
-
-    # # Task 3
-    #
-    # num = int(input("Enter the number: "))
-    # if num > 0:
-    #     print("The number is positive!")
-    # elif num < 0:
-    #     print("The number is negative!")
-    # else:
-    #     print("The number is equal zero!")
-
-
-    # #Task 4
-    #
-    # numOne = int(input("Enter first number: "))
-    # numTwo = int(input("Enter second number: "))
-    #
-    # if numOne == numTwo:
-    #     print("It's equal!")
-    # else:
-    #     if numOne > numTwo:
-    #         print("Not equal!\n", numOne, numTwo)
-    #     else:
-    #         print("Not equal!\n", numTwo, numOne)
-
-
-    # Task 5 (Class Task)
+    # Task 3
 
     products = {
-        'apples': 10,
-        'bananas': 15,
-        'oranges': 12,
-        'pears': 8,
-        'kiwi': 20
+        'dresses': 12,
+        'shoes': 8,
+        'shorts': 10,
+        'shirts': 21,
+        'hats': 3
     }
 
-    balance = 100
+    for product in products:
+        if products.get(product)<10:
+            print("Not enough ", product)
 
-    shopping_cart = []
 
-    while balance > 0:
 
-        for product in products:
-            print(product, products[product])
-
-        choice = input("What do you want to buy? Or type \"q\" if you want to quit\n")
-
-        if choice == "q":
-            break
-
-        if choice in products:
-            if balance >= products[choice]:
-                shopping_cart.append(choice)
-                print(choice, "is added to your shopping cart")
-                balance -= products[choice]
-            else:
-                print("You don't have enough money to buy it :(")
-        else:
-            print("Not find your choice!")
-
-    print("You bought:")
-    shopping_cart_sum = 0
-    for product in shopping_cart:
-        shopping_cart_sum += products[product]
-        print(product)
-
-    print("Your shopping cart sum is:", shopping_cart_sum)
-    print("Your current balance is:", balance)
