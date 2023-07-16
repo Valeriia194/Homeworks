@@ -1,45 +1,28 @@
 if __name__ == "__main__":
 
-    # # Task 1 + Task 2
+    # # Task 1
     #
-    # a = int(input("Enter the first number: "))
-    # b = int(input("Enter the second number: "))
-    # arr = []
+    # a = int(input("Enter the first number of range: "))
+    # b = int(input("Enter the second number of range: "))
     #
-    # # All numbers
-    # for i in range(a, b + 1):
-    #     arr.append(i)
-    # print(arr)
-    #
-    # # numbers vice versa
-    # for i in range(len(arr)):
-    #   arr[i:i+len(arr)] = sorted(arr[i:i+len(arr)], reverse = True)
-    # print(arr)
-    #
-    # # numbers divided on 7
-    # for i in range(a, b + 1):
-    #     if i % 7 == 0:
-    #         print(i)
-    #
-    # # how much divided on 5
-    # fiveNumbers = 0
-    # for i in range(a, b + 1):
-    #     if i % 5 == 0:
-    #         fiveNumbers+=1
-    # print("Quantity of numbers divided on 5: ", fiveNumbers)
+    # for item in range(a, b + 1):
+    #     if item%3!=0 and item%2!=0 or item==3 or item==2:
+    #         print(item)
 
 
     # Task 3
 
-    a = int(input("Enter the first number: "))
-    b = int(input("Enter the second number: "))
+    for i in range(1, 11):
+        print("----------------")
+        for j in range(1, 11):
+            print(i, "*", j, "=", i * j)
 
-    for i in range(a, b + 1):
-        if i % 3 == 0 and i%5!=0:
-            print("Fizz")
-        elif i % 5 == 0 and i%3!=0:
-            print("Buzz")
-        elif i % 5 == 0 and i%3==0:
-            print("Fizz Buzz")
-        else:
-            print(i)
+
+    # # Task 3
+    #
+    # a = int(input("Enter the first number of range: "))
+    # b = int(input("Enter the second number of range: "))
+    # for i in range (a, b+1):
+    #     print("----------------")
+    #     for j in range (1, 11):
+    #         print(i,"*", j, "=", i*j)
