@@ -1,98 +1,114 @@
-if __name__ == "__main__":
+import json
 
-    # # Task 1
-    #
-    # DayOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    # flag = True
-    #
-    # while flag:
-    #     day = int(input("Enter the number of day (from 1 to 7): "))
-    #     if 0 <= day <= 7:
-    #         print("It's ", DayOfWeek[day - 1])
-    #         flag = False
-    #     else:
-    #         print("Wrong number, try again!")
+# Cesar code
 
+def cesarCode(txt, key):
+    with open("products.json", 'r') as file:
+        alphabetData = json.load(file)
+    codeInNumber = []
+    for letter in txt:
+        for l in alphabetData:
+            if alphabetData[f"{l}"] == letter.lower():
+                codeInNumber.append(int(l) + int(key))
 
-    # # Task 2
-    #
-    # months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
-    #           'October', 'November', 'December']
-    # flag = True
-    #
-    # while flag:
-    #     monthNum = int(input("Enter the number of month (from 1 to 12): "))
-    #     if 0 <= monthNum <= 12:
-    #         print("It's ", months[monthNum - 1])
-    #         flag = False
-    #     else:
-    #         print("Wrong number, try again!")
-
-
-    # # Task 3
-    #
-    # num = int(input("Enter the number: "))
-    # if num > 0:
-    #     print("The number is positive!")
-    # elif num < 0:
-    #     print("The number is negative!")
-    # else:
-    #     print("The number is equal zero!")
-
-
-    # #Task 4
-    #
-    # numOne = int(input("Enter first number: "))
-    # numTwo = int(input("Enter second number: "))
-    #
-    # if numOne == numTwo:
-    #     print("It's equal!")
-    # else:
-    #     if numOne > numTwo:
-    #         print("Not equal!\n", numOne, numTwo)
-    #     else:
-    #         print("Not equal!\n", numTwo, numOne)
-
-
-    # Task 5 (Class Task)
-
-    products = {
-        'apples': 10,
-        'bananas': 15,
-        'oranges': 12,
-        'pears': 8,
-        'kiwi': 20
-    }
-
-    balance = 100
-
-    shopping_cart = []
-
-    while balance > 0:
-
-        for product in products:
-            print(product, products[product])
-
-        choice = input("What do you want to buy? Or type \"q\" if you want to quit\n")
-
-        if choice == "q":
-            break
-
-        if choice in products:
-            if balance >= products[choice]:
-                shopping_cart.append(choice)
-                print(choice, "is added to your shopping cart")
-                balance -= products[choice]
-            else:
-                print("You don't have enough money to buy it :(")
+    codeWord = ''
+    for num in codeInNumber:
+        if num <= 26:
+            codeWord += alphabetData[f"{num}"]
         else:
-            print("Not find your choice!")
+            codeWord += alphabetData[f"{num - 26}"]
+    return codeWord.capitalize()
 
-    print("You bought:")
-    shopping_cart_sum = 0
-    for product in shopping_cart:
-        shopping_cart_sum += products[product]
-        print(product)
+def antiCesarCode(txt, key):
+    with open("products.json", 'r') as file:
+        alphabetData = json.load(file)
+    codeInNumber = []
+    for letter in txt:
+        for l in alphabetData:
+            if alphabetData[f"{l}"] == letter.lower():
+                codeInNumber.append(int(l) - int(key))
 
-    print("Your shopping cart sum is:", shopping_cart_sum)
-    print("Your current balance is:", balance)
+    codeWord = ''
+    for num in codeInNumber:
+        if num <= 0:
+            codeWord += alphabetData[f"{26 + num}"]
+        else:
+            codeWord += alphabetData[f"{num}"]
+    return codeWord.capitalize()
+
+
+if __name__ == "__main__":
+    # enterArr = [5, 2, 4, 8]
+
+    word = "Python"
+    print(cesarCode(word, 3))
+    wordOne = "Sbwkrq"
+    print(antiCesarCode(wordOne, 3))
+
+
+# --------------------------------------------------------------------------------------
+
+# MyStat Tasks
+
+# def textPrinter ():
+#     print("Don't compare yourself with anyone in this world…", "\n",
+#           "if you do so, you are insulting yourself.", "\n",
+#           "Bill Gates")
+
+# def isPair (numOne, numTwo):
+#     for nums in range(numOne, numTwo+1):
+#         if nums%2==0:
+#             print(nums)
+
+
+# def squarePrinter (length, symbol):
+#     arrX = []
+#     arrY = []
+#     for i in range(0, length):
+#         arrY.append(symbol)
+#     for j in range(0, length):
+#         arrX.append(arrY)
+#     for row in arrX:
+#         for col in row:
+#             print(col, end=" ")
+#         print()
+
+
+# def minFromFiveNum (one, two, three, four, five):
+#     arr = []
+#     arr.append(one)
+#     arr.append(two)
+#     arr.append(three)
+#     arr.append(four)
+#     arr.append(five)
+#     arr.sort()
+#     print(arr[0])
+
+
+# def multOfNumbers(rangeStart, rangeEnd):
+#     result = 1
+#     if rangeStart>rangeEnd:
+#         temp = rangeStart
+#         rangeStart=rangeEnd
+#         rangeEnd=temp
+#     for i in range(rangeStart,rangeEnd+1):
+#         result *=i
+#         print(result)
+
+
+# def quantityOfNumbers(number):
+#     print(len(number))
+
+
+# def isPalindrome (number):
+#     if number == number[::-1]:
+#         return True
+#     else:
+#         return False
+
+# if __name__ == "__main__":
+
+
+
+
+
