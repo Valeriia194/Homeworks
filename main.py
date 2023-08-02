@@ -1,98 +1,131 @@
-if __name__ == "__main__":
+# TG Bot
 
-    # # Task 1
-    #
-    # DayOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    # flag = True
-    #
-    # while flag:
-    #     day = int(input("Enter the number of day (from 1 to 7): "))
-    #     if 0 <= day <= 7:
-    #         print("It's ", DayOfWeek[day - 1])
-    #         flag = False
-    #     else:
-    #         print("Wrong number, try again!")
+# import telebot
+# from telebot import types
+#
+# bot = telebot.TeleBot("")
+#
+# print("______ START BOT ______")
+#
+# def simple_numbers(star_value, end_value):
+#     simple_num = []
+#     for i in range(star_value, end_value):
+#         flag = True
+#         for dil in range(star_value, end_value):
+#             if dil != 1 and dil < i:
+#                 result = i % dil
+#                 if result == 0:
+#                      flag = False
+#                      break
+#             if dil >= i:
+#                 break
+#         if flag:
+#           simple_num.append(i)
+#     return simple_num
+#
+# def main_reply_menu():
+#     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+#     # itembtn1 = types.KeyboardButton('a')
+#     # itembtn2 = types.KeyboardButton('v')
+#     # itembtn3 = types.KeyboardButton('d')
+#     # markup.add(itembtn1, itembtn2, itembtn3)
+#     markup.row(types.KeyboardButton("$"), types.KeyboardButton("/start"), types.KeyboardButton("€"))
+#     markup.row(types.KeyboardButton("🦆Simple numbers"))
+#     return markup
+#
+#
+# @bot.message_handler(commands=['start', 'help'])
+# def send_welcome(msg):
+#     # bot.reply_to(message, "Howdy, how are you doing?")
+#     cid = msg.chat.id
+#     bot.send_message(cid, "Hello!", reply_markup=main_reply_menu())
+#
+#
+# @bot.message_handler(func=lambda message: True)
+# def echo_all(msg):
+#     # bot.reply_to(message, message.text)
+#     cid = msg.chat.id
+#     if msg.text == "🦆Simple numbers":
+#         numbers = simple_numbers(1,100)
+#         tempText = "List of simple numbers: \n\n"
+#         for num in numbers:
+#             tempText+=f"{num}"
+#         bot.send_message(cid, tempText)
+#     elif msg.text == "€":
+#         cid = msg.chat.id
+#         bot.send_message(cid, "Current course of Euro is: 40.53")
+#     elif msg.text == "$":
+#             cid = msg.chat.id
+#             bot.send_message(cid, "Current course of Dollar is: 36.95")
+#
+# bot.infinity_polling()
 
+# Task 1, 2
 
-    # # Task 2
-    #
-    # months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
-    #           'October', 'November', 'December']
-    # flag = True
-    #
-    # while flag:
-    #     monthNum = int(input("Enter the number of month (from 1 to 12): "))
-    #     if 0 <= monthNum <= 12:
-    #         print("It's ", months[monthNum - 1])
-    #         flag = False
-    #     else:
-    #         print("Wrong number, try again!")
+# def factorial (number):
+#     if number<0:
+#         print("Wrong number, try again!")
+#     else:
+#         fact = 1
+#         for i in range (2, number+1):
+#             fact=fact*i
+#         print(fact)
 
+# Task 3,4
 
-    # # Task 3
-    #
-    # num = int(input("Enter the number: "))
-    # if num > 0:
-    #     print("The number is positive!")
-    # elif num < 0:
-    #     print("The number is negative!")
-    # else:
-    #     print("The number is equal zero!")
+def addListOfNums (numberArr):
+    num = 5
+    print("Enter 5 numbers: ")
+    while (num>0):
+        numberArr.append(int(input()))
+        num-=1
 
-
-    # #Task 4
-    #
-    # numOne = int(input("Enter first number: "))
-    # numTwo = int(input("Enter second number: "))
-    #
-    # if numOne == numTwo:
-    #     print("It's equal!")
-    # else:
-    #     if numOne > numTwo:
-    #         print("Not equal!\n", numOne, numTwo)
-    #     else:
-    #         print("Not equal!\n", numTwo, numOne)
-
-
-    # Task 5 (Class Task)
-
-    products = {
-        'apples': 10,
-        'bananas': 15,
-        'oranges': 12,
-        'pears': 8,
-        'kiwi': 20
-    }
-
-    balance = 100
-
-    shopping_cart = []
-
-    while balance > 0:
-
-        for product in products:
-            print(product, products[product])
-
-        choice = input("What do you want to buy? Or type \"q\" if you want to quit\n")
-
-        if choice == "q":
-            break
-
-        if choice in products:
-            if balance >= products[choice]:
-                shopping_cart.append(choice)
-                print(choice, "is added to your shopping cart")
-                balance -= products[choice]
-            else:
-                print("You don't have enough money to buy it :(")
+def menu (numberArr):
+    print(f"Choose your action: ", "\n",
+          "Print list(1)", "\n",
+          "Max value(2)", "\n",
+          "Min value(3) ", "\n",
+          "Show element by index(4)", "\n",
+          "Delete element by index(5)", "\n",
+          "Exit(0)", "\n",)
+    choose = int(input("Your choose: "))
+    tempArr = numberArr.copy()
+    if (choose == 1):
+        print(numberArr)
+        menu(numberArr)
+    elif (choose == 2):
+        tempArr.sort()
+        print(tempArr[-1])
+        menu(numberArr)
+    elif (choose == 3):
+        tempArr.sort()
+        print(tempArr[0])
+        menu(numberArr)
+    elif (choose ==4):
+        i = int(input("Enter the index: "))
+        if (i > 0 and i < len(numberArr) - 1):
+            print(numberArr[i-1])
         else:
-            print("Not find your choice!")
+            print("Wrong index!")
+        menu(numberArr)
+    elif (choose == 5):
+        i = int(input("Enter the index: "))
+        if (i>0 and i<len(numberArr)-1):
+           numberArr.pop(i-1)
+           print("New array is: ", numberArr)
+        else:
+            print("Wrong index!")
+        menu(numberArr)
+    elif (choose == 0):
+        print("Good bye!")
+    else:
+        print("Wrong choice, try again!")
+        menu(numberArr)
 
-    print("You bought:")
-    shopping_cart_sum = 0
-    for product in shopping_cart:
-        shopping_cart_sum += products[product]
-        print(product)
+if __name__ == "__main__":
+    # number = int(input("Enter the number for find factorial: "))
+    # factorial(number)
 
-    print("Your shopping cart sum is:", shopping_cart_sum)
-    print("Your current balance is:", balance)
+    newArr = []
+    addListOfNums(newArr)
+    menu(newArr)
