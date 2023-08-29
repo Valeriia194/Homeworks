@@ -1,59 +1,16 @@
-body {
-    width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    font: Roboto;
+.bg{
+    background-color: rgb(223, 88, 88);
+    width: 30%;
+    list-style-position: inside;
+    color: aliceblue;
 }
 
-header, footer {
-    background: #D22F2F;
-    height: 117px;
-    text-align: center;
-    color: #ffffff;
+.bot{
+    background-color: rgb(157, 40, 40);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.olbg{
+    padding: 20px;
 }
 
-h1 {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 46.88px;
-    padding: 30px;
-}
-
-main {
-    width: 1268px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero {
-    height: 568px;
-    margin-top: 20px;
-}
-
-.about {
-    margin-top: 50px;
-    text-align: center;
-    color:#000000;
-}
-
-.cars {
-    width: 1268px;
-    margin-top: 50px;
-    text-align: center;
-}
-
-.cars > img {
-    display: inline-block;
-    margin: 10px;
-}
-
-footer {
-    margin-top: 50px;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 46.88px;
-}
-
-.footer-text {
-    padding: 30px;
-}
