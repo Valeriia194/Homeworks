@@ -1,0 +1,26 @@
+.bg{
+    background-color: rgb(227, 217, 217);
+    width: 30%;
+    list-style-position: inside;
+}
+
+.bot{
+    background-color: rgb(122, 170, 198);
+    padding: 3px;
+}
+.bot2{
+    background-color: rgb(71, 159, 207);
+    padding: 3px;
+}
+.olbg{
+    padding: 20px;
+}
+
+.bot.checked {
+    background-color: aliceblue;
+}
+
+.bot2.checked {
+    background-color: aliceblue;
+}
+

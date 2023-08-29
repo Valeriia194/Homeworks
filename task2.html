@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <section class="bg">
+        <header><h2 style="margin-left: 20px;">My To Do List</h2></header>
+        <div class="checkbox-container">
+            <ol class="olbg" style="list-style-type: none;">
+                <li class="bot"><input type="checkbox" style="margin-right: 10px;"><span padding: 10px;>Hit the gym</span></li>
+                <li class="bot2"><input type="checkbox" style="margin-right: 10px;"><span padding: 10px;>Pay bills</span></li>
+                <li class="bot"><input type="checkbox" style="margin-right: 10px;"><span padding: 10px;>Meet John</span></li>
+                <li class="bot2"><input type="checkbox" style="margin-right: 10px;"><span padding: 10px;>Buy eggs</span></li>
+                <li class="bot"><input type="checkbox" style="margin-right: 10px;"><span padding: 10px;>Read a book</span></li>
+            </ol>
+        </div>
+    </section>
+<script>
+$(document).on("change", "input[type='checkbox']", function(){
+    $(this).parent()[this.checked ? "addClass" : "removeClass"]("checked");
+});
+</script>
+</body>
+</html>
