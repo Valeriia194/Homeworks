@@ -1,130 +1,275 @@
-header{
+body {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
     display: flex;
     justify-content: space-between;
 }
 
 .logo {
     display: flex;
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-a{
+.logo div {
+    width: 150px;
+    padding: 8%;
+}
+
+nav {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ul {
+    list-style: none;
+    color: orange;
+}
+
+li {
+    display: inline;
+    margin: 25px;
+}
+
+nav a {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: orange;
     text-decoration: none;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
 
-nav ul li {
-    list-style: none;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #FF9100;
-    font-weight: 700px; 
+nav a:hover {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: red;
+    text-decoration: none;
 }
 
 button {
+    width: 150px;
+    height: 50px;
     border-radius: 12px;
-    border-color: #FF9100;
-    background-color: #FF9100;
-    box-shadow: none;
-    color: aliceblue;
-}
-
-.logo{
-    width: 60px;
-    height: 60px;
-    margin-left: 50px;
-}
-
-.header-left {
-    display: flex;
-    justify-content: space-between;
-}
-
-.company-name {
-    margin-left: 20px;
+    background-color: orange;
+    border-color: orange;
+    color: white;
 }
 
 main {
-    padding-left: 50px;
-
+    margin-top: 1%;
 }
 
-.first{
-    padding-top: 100px;
-        display: flex;
+.hero {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
     justify-content: space-between;
+    height: 400px;
 }
 
-.pict{
-    /* margin-left: 500px; */
-    content: url("/img/Rectangle 3.png");
-
+.hero-left {
+    width: 50%;
 }
 
-
-.second{
-    padding-top: 20px;
-    display: flex;
-justify-content: space-between;
-}
-
-.central{
-    
-    padding-right: 300px;
-    display: flex;
-    justify-content:center;
-}
-
-.imgs{
-    padding-left: 300px;
-    display: flex;
-    justify-content:space-evenly;
-}
-
-.block {
-    width: 261;
-    height: 305px;
-    background-color: #FF9100F5;
-    border-radius: 34px;
-    color: aliceblue;
-}
-
-.command {
-    padding: 30px 0;
-}
-
-.com__items {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.command .item {
-    min-width: 150px;
-    min-height: 150px;
-    border-radius: 50%;
-    background-color: #f90606;
-
-    /* background-image: url(/img/Ellipse\ 1.png); */
+.hero-right {
+    width: 50%;
+    background-image: url("/img/Rectangle 3.png");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    border-radius: 35px;
 }
 
-.itemt {
-    min-width: 150px;
-    min-height: 150px;
-    border-radius: 50%;
-    background-color: #f90606;
-
-    /* background-image: url(/img/Ellipse\ 1.png); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
+.hero-right-info {
+    margin-top: 240px;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.53%, #D46363 96.89%);
+    border-radius: 18px;
 }
+
+.hero-right-info p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hero-right-date {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    background: #FF910099;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding: 1%;
+    color: white;
+}
+
+.hero-right-text {
+    color: white;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.before-h1 {
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+h1 {
+    font-family: Roboto Slab;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 84px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.hero-left p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 70%;
+}
+
+.btn-hero {
+    width: 250px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: orange;
+    border-color: orange;
+    color: white;
+    text-align: center;
+}
+
+.hero-right-buttons {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.hero-right-buttons a {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 75px;
+    background-color: #FF910099;
+}
+
+.hero-right-buttons a:hover, a:active {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 75px;
+    background-color: red;
+}
+
+.hero-right-arrows {
+	width: 600px;
+	display: flex;
+    justify-content: space-between;
+	height: 30px;
+	position: absolute;
+    margin-top: 150px;
+}
+
+.fa-arrow {
+    border: solid orange;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 14px;
+    margin: 15px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+  
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.projects {
+    margin-top: 100px;
+}
+
+.projects h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid orange; 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    color: orange;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 300;
+ } 
+ 
+.projects span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+
+ .projects p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+ }
+
+ .project-cards {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .project-card {
+    height: 300px;
+    text-align: center;
+    background: #FF9100F5;
+    margin: 10px;
+    border-radius: 12px;
+    padding: 20px;
+ }

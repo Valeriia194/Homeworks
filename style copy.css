@@ -1,0 +1,130 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #FF9100;
+    font-weight: 700px; 
+}
+
+button {
+    border-radius: 12px;
+    border-color: #FF9100;
+    background-color: #FF9100;
+    box-shadow: none;
+    color: aliceblue;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    margin-left: 50px;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-name {
+    margin-left: 20px;
+}
+
+main {
+    padding-left: 50px;
+
+}
+
+.first{
+    padding-top: 100px;
+        display: flex;
+    justify-content: space-between;
+}
+
+.pict{
+    /* margin-left: 500px; */
+    content: url("/img/Rectangle 3.png");
+
+}
+
+
+.second{
+    padding-top: 20px;
+    display: flex;
+justify-content: space-between;
+}
+
+.central{
+    
+    padding-right: 300px;
+    display: flex;
+    justify-content:center;
+}
+
+.imgs{
+    padding-left: 300px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.block {
+    width: 261;
+    height: 305px;
+    background-color: #FF9100F5;
+    border-radius: 34px;
+    color: aliceblue;
+}
+
+.command {
+    padding: 30px 0;
+}
+
+.com__items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.command .item {
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    background-color: #f90606;
+
+    /* background-image: url(/img/Ellipse\ 1.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.itemt {
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    background-color: #f90606;
+
+    /* background-image: url(/img/Ellipse\ 1.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
