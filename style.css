@@ -36,12 +36,13 @@ nav {
     margin-bottom: auto;
 }
 
-ul {
+header ul {
     list-style: none;
-    color: orange;
+    color: #FF9100F5;
+    ;
 }
 
-li {
+header li, .slider-buttons li {
     display: inline;
     margin: 25px;
 }
@@ -53,7 +54,7 @@ nav a {
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-    color: orange;
+    color: #FF9100F5;
     text-decoration: none;
 }
 
@@ -65,7 +66,7 @@ nav a:hover {
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-    color: red;
+    color: #D46363;
     text-decoration: none;
 }
 
@@ -73,8 +74,8 @@ button {
     width: 150px;
     height: 50px;
     border-radius: 12px;
-    background-color: orange;
-    border-color: orange;
+    background-color: #FF9100F5;
+    border-color: #FF9100F5;
     color: white;
 }
 
@@ -172,18 +173,19 @@ h1 {
     width: 250px;
     height: 50px;
     border-radius: 12px;
-    background-color: orange;
-    border-color: orange;
+    background-color: #FF9100F5;
+    border-color: #FF9100F5;
     color: white;
     text-align: center;
 }
 
-.hero-right-buttons {
+.slider-buttons {
     margin-top: 50px;
     text-align: center;
+    padding: 0;
 }
 
-.hero-right-buttons a {
+.slider-buttons a {
     display: inline-block;
     height: 25px;
     width: 25px;
@@ -191,16 +193,16 @@ h1 {
     background-color: #FF910099;
 }
 
-.hero-right-buttons a:hover, a:active {
+.slider-buttons a:hover, a:active {
     display: inline-block;
     height: 25px;
     width: 25px;
     border-radius: 75px;
-    background-color: red;
+    background-color: #D46363;
 }
 
 .hero-right-arrows {
-	width: 600px;
+	width: 40%;
 	display: flex;
     justify-content: space-between;
 	height: 30px;
@@ -209,7 +211,7 @@ h1 {
 }
 
 .fa-arrow {
-    border: solid orange;
+    border: solid #FF9100F5;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 14px;
@@ -233,11 +235,11 @@ h1 {
 .projects h2 {
     width: 100%; 
     text-align: center; 
-    border-bottom: 1px solid orange; 
+    border-bottom: 1px solid #FF9100F5; 
     line-height: 0.1em;
     margin: 10px 0 20px;
     text-transform: uppercase;
-    color: orange;
+    color: #FF9100F5;
     font-family: Roboto;
     font-size: 36px;
     font-weight: 300;
@@ -257,6 +259,13 @@ h1 {
     text-align: center;
  }
 
+ .after-h2 {
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
  .project-cards {
     width: 80%;
     display: flex;
@@ -266,10 +275,264 @@ h1 {
  }
 
  .project-card {
-    height: 300px;
     text-align: center;
     background: #FF9100F5;
     margin: 10px;
     border-radius: 12px;
     padding: 20px;
+    width: 20%;
  }
+
+ .project-card h3 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+ }
+
+ .project-card p {
+    font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFFFFF;
+}
+
+.project-card:hover {
+    text-align: center;
+    background: #D46363;
+    margin: 10px;
+    border-radius: 12px;
+    padding: 20px;
+    width: 20%;
+ }
+
+.fa-project-card {
+    width: 140px;
+    height: 140px;
+}
+
+.presentation {
+    content: url(img/presentation\ 1.png);
+}
+
+.classroom {
+    content: url(img/classroom\ 1.png);
+}
+
+.coworking {
+    content: url(img/classroom\ 1.png);
+}
+
+.project {
+    content: url(img/project\ 1.png);
+}
+
+.team {
+    margin-top: 50px;
+    background:#FFA8000F;
+}
+
+.team h2 {
+    width: 100%; 
+    text-align: center; 
+    border-right: 1px solid #D46363; 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    color: #D46363;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 300;
+    background-color: #FFA8000F;
+ }
+
+
+ .team span { 
+    background:#FFA8000F;
+    padding:0 10px; 
+}
+
+.members {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    justify-items: center;
+}
+
+.fa-members {
+    content: url(img/Group\ 2\ 2.png);
+    width: 100px;
+    height: 100px;
+}
+
+.members i {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.cta-btn {
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cta-btn button {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partners {
+    margin-top: 50px;
+}
+
+.partners h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.partners-logo {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+.partners-logo span {
+    margin-left: 10px;
+}
+
+.partners-logo:hover {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partner {
+    height: 60px;
+    display: flex;
+    filter: grayscale(100%);
+    padding: 5px;
+}
+
+.partner:hover {
+    filter: grayscale(0%);
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #FF9100E5;
+    width: 100%;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    width: 80%;
+}
+
+.footer-logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.footer-logo img {
+    height: 100px;
+    width: 100px;
+}
+
+.footer-logo span {
+    font-family: Roboto;
+font-size: 24px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: left;
+width: 100px;
+margin-left: 25px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    list-style: none;
+    margin: 25px;
+}
+
+.footer-menu li {
+    padding: 20px;
+}
+
+.footer-contacts li {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 25px;
+}
+
+.footer-contacts span {
+    padding: 10px;
+}
+
+.footer-social li {
+    display: inline;
+    margin: 25px;
+}
+
+.fa-phone {
+    content: url(img/old-typical-phone\ 1.png);
+}
+
+.fa-email {
+    content: url(img/email\ 1.png);
+}
+
+.fa-telegram {
+    content: url(img/telegram\ 1.png);
+}
+
+.fa-facebook {
+    content: url(img/Group.png);
+}
+
+.fa-instagram {
+    content: url(img/instagram\ \(1\)\ 1.png);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #D46363;
+}
