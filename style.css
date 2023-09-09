@@ -1,0 +1,46 @@
+body {
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-right: auto;
+    font-family: Roboto;
+    font-size: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: aliceblue;
+    background-color: rgb(51, 86, 51);
+}
+
+h1 {
+    text-align: left;
+    font-size: 58px;
+    width: 35%;
+ }
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+}
+
+.grid-item {
+    display: inline-grid;
+}
+
+.fa-profile {
+    content: url(img/account.png);
+    width: 60px;
+    height: 60px;
+}
+
+@media screen and (max-width: 600px) { 
+    .grid-container {
+        display: grid;
+        grid-template-columns: 150px 150px;
+}
+}
