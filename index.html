@@ -12,8 +12,8 @@
         <div class="logo">
             <img src="img/Group 2 1.png"><div class="name">Громадська організація IT - місто</div>
         </div>
-        <nav>
-            <ul class="desktop-menu">
+        <nav class="desktop-menu">
+            <ul class="desktop-menu-list">
                 <li><a href="#">Новини</a></li>
                 <li><a href="#">Проекти</a></li>
                 <li><a href="#">Команда</a></li>
@@ -21,20 +21,25 @@
                 <li><button>Контакти</button></li>
             </ul>
         </nav>
-        <nav>
+        <nav class="mobile-menu">
             <button>Контакти</button>
-            <div class="burger">
+            <div class="burger" onclick="openNav()">
                 <div></div>
                 <div></div>
                 <div></div>
-            
-            <ul class="mobile-menu">
-                <li><a href="#">Новини</a></li>
-                <li><a href="#">Проекти</a></li>
-                <li><a href="#">Команда</a></li>
-                <li><a href="#">Про нас</a></li>
-                <li><button>Контакти</button></li>
-            </ul></div>
+            </div>
+            <div class="overlay" id="mobileNav">
+                <div class="overlay-close-btn" onclick="closeNav()">x</div>
+                <div class="overlay-content">
+                    <ul class="mobile-menu-list">
+                        <li><a href="#">Новини</a></li>
+                        <li><a href="#">Проекти</a></li>
+                        <li><a href="#">Команда</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                    <div class="mobile-menu-line"></div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -177,5 +182,13 @@
             </div>
         </div>
     </footer>
+<script>
+function openNav() {
+  document.getElementById("mobileNav").style.display = "block";
+}
+function closeNav() {
+  document.getElementById("mobileNav").style.display = "none";
+}
+</script>
 </body>
 </html>
