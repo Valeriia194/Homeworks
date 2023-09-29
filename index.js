@@ -1,203 +1,103 @@
-// TASK 1 -----------------------------------------------
+function showPassword(selector) {
+    // get element)
+    const TARGET = document.querySelector(selector);
+    const TARGET_VALUE = TARGET.getAttribute("type")
+    TARGET_VALUE == "password" ? TARGET.setAttribute("type", "text") : TARGET.setAttribute("type", "password")
 
-// let a = prompt("How old are you?")
-// if (a>0&&a<=12){
-//     alert("U are children")
-// }
-// else if(a>12&&a<=18){
-//     alert("U are teenager")
-// }
-// else if(a>18&&a<=60){
-//     alert("U are adult")
-// }
-// else if(a>60){
-//     alert("U are pensioner")
-// }
-// else {
-//     alert("No way")
-// }
+    // hide eye icon
 
-// TASK 2 -----------------------------------------------
-
-// let a = prompt("Enter the number from 0 to 9: ")
-// switch (a){
-//     case '0': 
-//     alert(")");
-//     break;
-
-//     case '1': 
-//     alert("!");
-//     break;
-  
-//     case '2': 
-//     alert("@");
-//     break;
-
-//     case '3': 
-//     alert("#");
-//     break;
-
-//     case '4': 
-//     alert("$");
-//     break;
-
-//     case '5': 
-//     alert("%");
-//     break;
-
-//     case '6': 
-//     alert("^");
-//     break;
-
-//     case '7': 
-//     alert("&");
-//     break;
-
-//     case '8': 
-//     alert("*");
-//     break;
-
-//     case '9': 
-//     alert("(");
-//     break;
-
-//     default:
-//     alert("Wrong number!");
-// }
-
-
-// TASK 3 -----------------------------------------------
-
-// let a = prompt("Enter the number: ")
-// let one = (a/100)-((a%100)/100)
-// let three = a%10
-// let two = Math.trunc((a/10)%10)
-// if (one==two || one==three || two==three) {
-//     alert("Here is similiar numbers!")
-// }
-// else {
-//     alert("No similiar numbers!")
-// }
-
-// TASK 4 -----------------------------------------------
-
-// let a = prompt("Enter the year(2000-2132): ")
-// if (a%4==0 || a%4000==0){
-//    alert("Its leap year!") 
-// }
-// else {
-//     alert("Not leap year!")
-// }
-
-// TASK 5 -----------------------------------------------
-
-// let a = prompt("Enter the number:")
-// let one = (a/100)-((a%100)/100)
-// let three = a%10
-// let two = Math.trunc((a/10)%10)
-// let result = (three*100)+(two*10)+one
-// alert(`Palindrom is: ${result}!`)
-
-// TASK 6 -----------------------------------------------
-
-// let a = prompt("Enter the quantity of dollars: ")
-// let b = prompt("Enter the currency(EUR, UAR, AZN): ")
-// switch (b) {
-//     case "EUR":
-//         alert(`U will get ${a*0.95}`)
-//         break;
-//     case "UAR":
-//         alert(`U will get ${a*36.93}`)
-//         break;
-//     case "AZN":
-//         alert(`U will get ${a*1.7}`)
-//         break;
-// }
-
-// TASK 7 -----------------------------------------------
-
-// let a = prompt("Enter the sum of the purchase: ")
-// if (a>=200&&a<=300) {
-//     alert(`Your sum with discount ${a - (a*0.03)}`)
-// }
-// else if (a>300&&a<=500){
-//     alert(`Your sum with discount ${a - (a*0.05)}`)
-// }
-// else if (a>500){
-//     alert(`Your sum with discount ${a - (a*0.07)}`)
-// }
-// else {
-//     alert("No discount!")
-// }
-
-// TASK 8 -----------------------------------------------
-
-// let a = prompt("Enter the length of circle: ")
-// let b = prompt("Enter the perimetre of quadrate: ")
-// if (b/(2/Math.sqrt(2)) >= a) {
-//     alert("Circle can be in quadrate")
-// }  
-// else {
-//     alert("Circle cant be in quadrate") 
-// }
-
-// TASK 9 -----------------------------------------------
-
-// let a = prompt("Cat is an animal? (Yes, No, Partly)");
-// let b = prompt("How much questions u need to answer? (3, 1, 15)");
-// let c = prompt("The color of sky? (blue, red, green)");
-// let rightAnswers = 0;
-// switch (a){
-//     case 'Yes':
-//         rightAnswers = rightAnswers+1;
-        
-// }
-// switch (b){
-//     case '3':
-//         rightAnswers = rightAnswers+1;
-        
-// }
-// switch (c){
-//     case 'blue':
-//         rightAnswers = rightAnswers+1;
-        
-// }
-// alert(`U ask right on ${rightAnswers} questions!`)
-
-// TASK 10 -----------------------------------------------
-
-let day = prompt("Enter the day: ");
-let mon = prompt("Enter the month: ");
-let year = prompt("Enter the year: ");
-let choice = prompt("Show next day, month or year?(d, m, y)")
-
-if (choice == 'd'){
-    if (day==31){
-        alert(`The date is 1 ${Number(mon)+1} ${year}`)
-    }
-    else if (day>31||mon>12||year<=0){
-        alert("Wrong data!")
-    }
-    else{
-    alert(`The date is ${Number(day)+1} ${mon} ${year}`)
-    }
 }
-else if (choice == 'm'){
-    if (mon==12){
-        alert(`The date is ${day} 1 ${Number(year)+1}`)
-    }
-    else if (day>31||mon>12||year<=0){
-        alert("Wrong data!")
-    }
-    else {
-    alert(`The date is ${day} ${Number(mon)+1} ${year}`)
-    }
+
+const getUserRole = (element) => {
+    const ACTIVE_ELEMENT = element.querySelector(".active")
+    const DATA = ACTIVE_ELEMENT.getAttribute("data-role")
+    return DATA
 }
-else if (choice == 'y'){
-    if (day>31||mon>12||year<=0){
-        alert("Wrong data!")
+
+const getDataFromField = (element) => {
+    const VALUE = element.value;
+    const TYPE = element.getAttribute("name")
+
+    if (TYPE == "last_name") {
+        if (VALUE.length >= 3) {
+            return VALUE
+        } else {
+            alert("Lastname to short")
+            return null
+        }
     }
-    else {
-        alert(`The date is ${day} ${mon} ${Number(year)+1}`)
-    }
+    // need delete for production ##
+    return VALUE
 }
+
+
+// start point
+document.addEventListener("DOMContentLoaded", () => {
+    // read from LS
+    const USER_DATA = JSON.parse(localStorage.getItem("user"));
+    console.log(USER_DATA);
+    // get element from document
+    const LEFT_BLOCK = document.querySelector(".form__top_LFor_Lblock");
+    const RIGHT_BLOCK = document.querySelector(".form__top_LFor_Rblock");
+    const LF_BLOCK = document.querySelector(".form__top_LFor");
+    const CHECK_BOX = document.querySelector(".form__input_checkbox");
+    const SUBMIT_BTN = document.querySelector(".form__input_sumbit");
+    const REGISTER_FORM = document.querySelector(".form");
+    // get user data element
+    const INPUT_NAME = document.querySelector(".form__input_first_name");
+    const INPUT_EMAIL = document.querySelector(".form__input_email");
+    const INPUT_LAST_NAME = document.querySelector(".form__input_second_name");
+    const INPUT_PASSWORD = document.querySelector(".form__input_password");
+    const INPUT_CONFIRM_PASSWORD = document.querySelector(".form__input_password_reat");
+    
+    if(USER_DATA){
+        const {userName, userLastName, userEmail, userPassword} = USER_DATA;
+        INPUT_NAME.value = userName;
+        INPUT_LAST_NAME.value = userLastName;
+        INPUT_EMAIL.value = userEmail;
+    }
+    // switch user role
+    LF_BLOCK.addEventListener("click", () => {
+        LEFT_BLOCK.classList.toggle('active');
+        RIGHT_BLOCK.classList.toggle('active');
+    })
+    // get value form checkbox on click
+    CHECK_BOX.addEventListener("click", function (e) {
+        const CHECK_BOX_VALUE = CHECK_BOX.checked
+        // CHECK_BOX_VALUE ? SUBMIT_BTN.disabled = !CHECK_BOX_VALUE : SUBMIT_BTN.disabled = !CHECK_BOX_VALUE;
+        CHECK_BOX_VALUE ? SUBMIT_BTN.disabled = false : SUBMIT_BTN.disabled = true;
+    })
+    // submit form
+    REGISTER_FORM.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // get data form
+        let role = getUserRole(LF_BLOCK);
+        let userLastName = getDataFromField(INPUT_LAST_NAME);
+        let userName = getDataFromField(INPUT_NAME);
+        let userEmail = getDataFromField(INPUT_EMAIL);
+        let userPassword = getDataFromField(INPUT_PASSWORD);
+        let userConfirmPassword = getDataFromField(INPUT_CONFIRM_PASSWORD);
+
+        // validation data
+        if (userConfirmPassword != userPassword){
+            console.log("Password don't match, please try again!")
+            return
+        }
+
+        // create data frame
+        const USER_DATA = {
+            role, userName, userLastName, userEmail, userPassword
+        }
+
+        // set to LS
+        localStorage.setItem("user", JSON.stringify(USER_DATA));
+        // set to SS
+        sessionStorage.setItem("user", JSON.stringify(USER_DATA));
+        // set to Cookie
+        const cookieObj = JSON.stringify(USER_DATA);
+        document.cookie = `user=${cookieObj}; expires=Thu, 01 Jan 2099 00:00:00 UTC; path="/"`
+
+
+        console.log("USER_DATA", USER_DATA)
+    })
+})
