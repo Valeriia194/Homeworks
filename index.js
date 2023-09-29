@@ -166,17 +166,38 @@
 
 // TASK 10 -----------------------------------------------
 
-// let day = prompt("Enter the day: ");
-// let mon = prompt("Enter the month: ");
-// let year = prompt("Enter the year: ");
-// let choice = prompt("Show next day, month or year?(d, m, y)")
+let day = prompt("Enter the day: ");
+let mon = prompt("Enter the month: ");
+let year = prompt("Enter the year: ");
+let choice = prompt("Show next day, month or year?(d, m, y)")
 
-// if (choice == 'd'){
-//     alert(`The date is ${day+=1} ${mon} ${year}`)
-// }
-// else if (choice == 'm'){
-//     alert(`The date is ${day} ${mon+=1} ${year}`)
-// }
-// else if (choice == 'y'){
-//     alert(`The date is ${day} ${mon} ${year+=1}`)
-// }
+if (choice == 'd'){
+    if (day==31){
+        alert(`The date is 1 ${Number(mon)+1} ${year}`)
+    }
+    else if (day>31||mon>12||year<=0){
+        alert("Wrong data!")
+    }
+    else{
+    alert(`The date is ${Number(day)+1} ${mon} ${year}`)
+    }
+}
+else if (choice == 'm'){
+    if (mon==12){
+        alert(`The date is ${day} 1 ${Number(year)+1}`)
+    }
+    else if (day>31||mon>12||year<=0){
+        alert("Wrong data!")
+    }
+    else {
+    alert(`The date is ${day} ${Number(mon)+1} ${year}`)
+    }
+}
+else if (choice == 'y'){
+    if (day>31||mon>12||year<=0){
+        alert("Wrong data!")
+    }
+    else {
+        alert(`The date is ${day} ${mon} ${Number(year)+1}`)
+    }
+}
