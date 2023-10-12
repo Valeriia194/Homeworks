@@ -1,16 +1,124 @@
-.products__area_item{
-    display: inline-block;
-    padding: 12px;
-    border: 1px solid red;
+body {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
 }
 
-.products__area_item img {
-    max-width: 100px;
-    max-height: 100px;
+header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.products__area{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+.header_list {
+    display: flex;
+    flex-direction: row;
+}
+
+.header_list li {
+    padding: 5px;
+}
+
+.hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1240px;
+    height: 587px; 
+}
+
+.text_welcome h1{
+    font-style: italic; 
+}
+
+.text_middle {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.team {
+    margin-top: 50px;
+    background:#FFA8000F;
+}
+
+.team span { 
+    background:#FFA8000F;
+    padding:0 10px; 
+}
+
+.members {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    justify-items: center;
+}
+
+.subhead {
+    margin-top: 50px;
+    width: auto;
+    height: 300px;
+    background-color: rgb(126, 201, 201);
+    display: flex;
+}
+
+.subhead_pic img{
+    height: 240px;
+    padding-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.subhead_text p{
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 30px;
+}
+
+.subhead_text button {
+    margin-left: 720px;
+    margin-right: 250px;
+    background-color: yellow;
+    height: 40px;
+    width: 120px;
+}
+
+.prefoot {
+    margin-top: 50px;
+    width: auto;
+    height: 300px;
+    display: flex;
+}
+
+.prefoot_pic img{
+    height: 400px;
+    padding-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.prefoot_text p{
+    margin-left: 200px;
+    margin-right: 250px;
+    margin-top: 30px;
+}
+
+.prefoot_text button {
+    margin-left: 670px;
+    margin-right: 250px;
+    background-color:cadetblue;
+    height: 40px;
+    width: 120px;
 }

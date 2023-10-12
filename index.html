@@ -7,33 +7,91 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <section class="products">
-        <div class="products__sort">
-            <label for="products__sort">Sort Product Price:</label>
-            <select name="sort" id="products__sort">
-                <option selected disabled>Select type SORT</option>
-                <option value="ASC">ASC</option>
-                <option value="DESC">DESC</option>             
-            </select>
+    <!-- ------------------------------------HEADER------------------------------------------ -->
+    <header>
+        <div>
+            <h3>Company name</h3>
         </div>
-        <div class="products__filter">
-            <div class="products__filter_search">
-                <label for="filter_search">  Search:</label>
-                <input type="text" name="search" id="filter_search">
-            </div>
+        <nav>
+            <ul style = "list-style-type: none;" class = "header_list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">What we do</a></li>
+                <li><a href="#">Servises</a></li>
+                <li><a href="#">References</a></li>
+            </ul>
+        </nav>
+        <!-- ---------------------------------------------HERO--------------------------------------------- -->
+    </header>
+    <main>
+        <div class="hero">
+            <img src="img/Hero.png" alt="hero_img">
+        </div>
 
-            <div class="products__filter_category">
-                <label for="filter_category">Choose Category:</label>
-                <select name="category" id="filter_category">
-                    <option value="">Categ1</option>
-                    <option value="">Categ1</option>
-                </select>
+        <div style="text-align: center;" class="text_welcome">
+            <h1>Welcome person!</h1>
+            <h3>We're here for excelent service!</h3>
+        </div>
+        <!-- -------------------------------------------------------Text----------------------------------------------------- -->
+        <div style="text-align: center;" class = "text_middle">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+
+In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+        </div>
+        <!-- ---------------------------------Three pictures-------------------------------------------- -->
+        <div class="team">
+            <div class="members">
+                <div class="member">
+                    <img src="img/title.png">
+                    <h4>Title here</h4>
+                    <h5>Subtitle here</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</h5>
+                    <button>read more</button>
+                </div>
+                <div class="member">
+                    <img src="img/title.png">
+                    <h4>Title here</h4>
+                    <h5>Subtitle here</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</h5>
+                    <button>read more</button>
+                </div>
+                <div class="member">
+                    <img src="img/title.png">
+                    <h4>Title here</h4>
+                    <h5>Subtitle here</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</h5>
+                    <button>read more</button>
+                </div>
             </div>
-        </div>
-        <div class="products__area">
-            <!-- Products List -->
-        </div>
-    </section>
-    <script src="index.js"></script>
+            <!-- ----------------------------------------------------SubHEADLINE------------------------------------------------------------------------------- -->
+            <div class="subhead">
+                <div class="subhead_pic">
+                    <img src="img/Rectangle 4.png">
+                </div>
+                <div class="subhead_text">
+                    <p>Title here</p>
+                    <p>Something something</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                    <button>Read more</button>
+                </div>
+            </div>
+            <!-- -------------------------------------------------------------pre-Footer--------------------------------------------------------------- -->
+            <div class="prefoot">
+                <div class="prefoot_pic">
+                    <img src="img/Rectangle 6.png">
+                </div>
+                <div class="prefoot_text">
+                    <p>Hey! This is a good place!</p>
+                    <p>Something something</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                    <button>Read more</button>
+                </div>
+            <!-- ----------------------------------------------------FOOTER------------------------------------------------------------------------------ -->
+                <footer>
+                
+                </footer>
+        </main>
+
+ <script src="index.js"></script>
 </body>
 </html>
