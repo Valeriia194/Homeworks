@@ -1,5 +1,12 @@
+// Burger menu
+function openNav() {
+  document.getElementById("mobileNav").style.display = "block";
+}
+function closeNav() {
+  document.getElementById("mobileNav").style.display = "none";
+}
 
-
+// Form Registration
 const getDataFromField = (element) => {
     const VALUE = element.value;
     const TYPE = element.getAttribute("name")
@@ -15,11 +22,14 @@ const getDataFromField = (element) => {
     return VALUE
 }
 
+
+//start
+
 document.addEventListener("DOMContentLoaded", () => {
     const USER_DATA = JSON.parse(localStorage.getItem("user"));
     console.log(USER_DATA);
 
-
+    const CHECK_BOX = document.querySelector(".form__input_checkbox");
     const SUBMIT_BTN = document.querySelector(".form__input_sumbit");
     const REGISTER_FORM = document.querySelector(".form");
     const INPUT_LAST_NAME = document.querySelector(".form__input_second_name");
@@ -33,10 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
         INPUT_NAME.value = userName;
         INPUT_LAST_NAME.value = userLastName;
         INPUT_EMAIL.value = userEmail;
+        INPUT_PASSWORD.value = userPassword;
     }
 
     CHECK_BOX.addEventListener("click", function (e) {
-        const CHECK_BOX_VALUE = CHECK_BOX.checked
+        const CHECK_BOX_VALUE = CHECK_BOX.checked;
         CHECK_BOX_VALUE ? SUBMIT_BTN.disabled = false : SUBMIT_BTN.disabled = true;
     })
 

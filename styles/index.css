@@ -19,12 +19,12 @@ header {
     justify-content: space-between;
 }
 
-.header_list {
+.header__list {
     display: flex;
     flex-direction: row;
 }
 
-.header_list li {
+.header__list li {
     padding: 5px;
 }
 
@@ -36,11 +36,11 @@ header {
     height: 587px; 
 }
 
-.text_welcome h1{
+.text__welcome h1{
     font-style: italic; 
 }
 
-.text_middle {
+.text__middle {
     margin-left: 150px;
     margin-right: 150px;
 }
@@ -55,7 +55,7 @@ header {
     padding:0 10px; 
 }
 
-.team_members {
+.team__members {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -65,10 +65,11 @@ header {
     justify-items: center;
 }
 
-.team_members__member button {
+.team__members_member button {
     background-color:cadetblue;
     height: 40px;
     width: 120px;
+    cursor: pointer;
 }
 
 .subhead {
@@ -79,25 +80,26 @@ header {
     display: flex;
 }
 
-.subhead_pic img{
+.subhead__pic img{
     height: 240px;
     padding-left: 100px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.subhead_text p{
+.subhead__text p{
     margin-left: 250px;
     margin-right: 250px;
     margin-top: 30px;
 }
 
-.subhead_text button {
+.subhead__text button {
     margin-left: 720px;
     margin-right: 250px;
     background-color: yellow;
     height: 40px;
     width: 120px;
+    cursor: pointer;
 }
 
 .prefoot {
@@ -107,25 +109,26 @@ header {
     display: flex;
 }
 
-.prefoot_pic img{
+.prefoot__pic img{
     height: 400px;
     padding-left: 100px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.prefoot_text p{
+.prefoot__text p{
     margin-left: 200px;
     margin-right: 250px;
     margin-top: 30px;
 }
 
-.prefoot_text button {
+.prefoot__text button {
     margin-left: 670px;
     margin-right: 250px;
     background-color:cadetblue;
     height: 40px;
     width: 120px;
+    cursor: pointer;
 }
 
 footer {
@@ -136,25 +139,26 @@ footer {
     display: flex;
 }
 
-.foot_text p{
+.foot__text p{
     margin-left: 200px;
     margin-right: 10px;
     margin-top: 30px;
     width: 300px;
 }
 
-.foot_sec_text p{
+.foot__sec_text p{
     margin-left: 200px;
     margin-right: 250px;
     margin-top: 30px;
 }
 
-.foot_sec_text button{
+.foot__sec_text button{
     margin-left: 200px;
     margin-right: 250px;
     background-color:rgb(186, 234, 234);
     height: 40px;
     width: 120px;
+    cursor: pointer;
 }
 
 .rights {
@@ -285,18 +289,18 @@ footer {
         height: 187px; 
     }
 
-    .text_middle {
+    .text__middle {
         margin-left: 10px;
         margin-right: 10px;
     }
 
-    .team_members {
+    .team__members {
         display: block;
         width: 80%;
         margin-top: 50px;
         justify-items: center;
     }
-    .team_members__member button{
+    .team__members_member button{
         margin-bottom: 20px;
     }
 
@@ -306,12 +310,12 @@ footer {
         height: auto;
         display: block;
     }
-    .subhead_text p{
+    .subhead__text p{
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 30px;
     }
-    .subhead_text button {
+    .subhead__text button {
         margin-left: 10px;
         margin-bottom: 10px;
         background-color: yellow;
@@ -324,19 +328,19 @@ footer {
         display: block;
     }
     
-    .prefoot_pic img{
+    .prefoot__pic img{
         padding-left: 50px;
         margin-top: 30px;
         margin-bottom: 30px;
     }
     
-    .prefoot_text p{
+    .prefoot__text p{
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 30px;
     }
     
-    .prefoot_text button {
+    .prefoot__text button {
         margin-left: 10px;
     }
 
@@ -347,26 +351,26 @@ footer {
         display: block;
     }
     
-    .foot_text p{
+    .foot__text p{
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 30px;
         width: 300px;
     }
     
-    .foot_sec_text p{
+    .foot__sec_text p{
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 30px;
     }
     
-    .foot_sec_text button{
+    .foot__sec_text button{
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 20px;
     }
     
-    .header_list {
+    .header__list {
         display: none;
     }
 
