@@ -55,7 +55,7 @@ header {
     padding:0 10px; 
 }
 
-.members {
+.team_members {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -65,7 +65,7 @@ header {
     justify-items: center;
 }
 
-.member button {
+.team_members__member button {
     background-color:cadetblue;
     height: 40px;
     width: 120px;
@@ -164,5 +164,215 @@ footer {
     padding-top: 0;
     padding-bottom: 0;
     text-align: center;
+}
+
+/* -----------------------------------------BURGER----------------------------------------------------------- */
+
+.burger{
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.burger :first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.burger :nth-child(2){
+    position: absolute;
+    bottom: calc(24px/2 - 2px/2);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.burger :last-child{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.burger.active :first-child{
+    transform: rotate(45deg);
+    top: calc(50% - 1px);
+    transition: 0.5s;
+}
+
+.burger.active :nth-child(2){
+    display: none;
+    transition: 0.5s;
+}
+
+.burger.active :last-child{
+    transform: rotate(-45deg);
+    bottom: calc(50% - 1px);
+    transition: 0.5s;
+}
+
+.mobile-menu {
+    display:none;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    display: none;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: orange;
+  }
+
+  ul.mobile-menu-list {
+    padding-inline-start: 0;
+  }
+
+  .mobile-menu-line {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid orange;
+}
+
+/* ----------------------------------------------ADAPTATION-------------------------------------------------------- */
+
+@media screen and (max-width: 480px) {
+    /* .header_list li{
+        font-size: small;
+        padding-right: 5px;
+    } */
+    .hero {
+        width: 360px;
+        height: 187px; 
+    }
+
+    .hero img{
+        display: flex;
+        margin-left: 10px;
+        margin-right: auto;
+        width: 360px;
+        height: 187px; 
+    }
+
+    .text_middle {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .team_members {
+        display: block;
+        width: 80%;
+        margin-top: 50px;
+        justify-items: center;
+    }
+    .team_members__member button{
+        margin-bottom: 20px;
+    }
+
+    .subhead {
+        margin-top: 50px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .subhead_text p{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+    .subhead_text button {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        background-color: yellow;
+        height: 40px;
+        width: 120px;
+    }
+
+    .prefoot {
+        height: auto;
+        display: block;
+    }
+    
+    .prefoot_pic img{
+        padding-left: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .prefoot_text p{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+    
+    .prefoot_text button {
+        margin-left: 10px;
+    }
+
+    footer {
+        margin-top: 150px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    
+    .foot_text p{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+        width: 300px;
+    }
+    
+    .foot_sec_text p{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+    
+    .foot_sec_text button{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .header_list {
+        display: none;
+    }
+
+    .mobile-menu{
+        display: flex;
+        padding-top: 10px;
+    }
 }
 
