@@ -47,10 +47,10 @@ const showProductsOnDOM = async (products, selector) => {
             <h2>${title}</h2>
             <h4>${price} $</h4>
             <p>${description}</p>
-            <button data-id=${id} class="add_to_cart">
+            <button data-id="${id}" class="add_to_cart">
                 Add to Cart
             </button>
-            <button data-id=${id} class="remove_from_cart">Delete from Cart</button>
+            <button data-id="${id}" class="remove_from_cart">Delete from Cart</button>
         </div>
             `
         })
@@ -70,6 +70,16 @@ const showProductsOnDOM = async (products, selector) => {
     })
     
     const CLEAR_CART_BTN = document.querySelector(".clear_cart").addEventListener('click', clearCart);
+
+    const REMOVE_FROM_CART_BTNS = document.querySelectorAll(".remove_from_cart");
+    // add listeners
+    REMOVE_FROM_CART_BTNS.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const PRODUCT_ID = e.target.getAttribute("data-id")
+            removeProductFromCart(PRODUCT_ID)
+        })
+    })
+
 }
 
 const addNewProduct = async () => {
@@ -130,6 +140,23 @@ const addProductsToCart = (product_id) => {
     // write to LS
     localStorage.setItem("cart", JSON.stringify(cart))
     // display counter cart
+    showCounterCart();
+}
+
+const removeProductFromCart = (product_id) => {
+    let cart = localStorage.getItem("cart");
+    cart ? cart = JSON.parse(cart) : cart = [];
+    for (let i in cart) {
+      if (cart[i].id === product_id) {
+          cart[i].qty --;
+          
+          if (cart[i].qty === 0) {
+              cart.splice(i, 1);
+          }
+          break;
+      }
+    }
+    localStorage.setItem("cart", JSON.stringify(cart))
     showCounterCart();
 }
 
