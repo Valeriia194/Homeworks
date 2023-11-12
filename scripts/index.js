@@ -27,6 +27,12 @@ const showCounterCart = () => {
     }
 }
 
+const clearCart = () => {
+    let cart = localStorage.getItem("cart");
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    showCounterCart();
+}
 
 const showProductsOnDOM = async (products, selector) => {
     // create html
@@ -44,7 +50,7 @@ const showProductsOnDOM = async (products, selector) => {
             <button data-id=${id} class="add_to_cart">
                 Add to Cart
             </button>
-            <button>Delete from Cart</button>
+            <button data-id=${id} class="remove_from_cart">Delete from Cart</button>
         </div>
             `
         })
@@ -62,6 +68,8 @@ const showProductsOnDOM = async (products, selector) => {
             addProductsToCart(PRODUCT_ID)
         })
     })
+    
+    const CLEAR_CART_BTN = document.querySelector(".clear_cart").addEventListener('click', clearCart);
 }
 
 const addNewProduct = async () => {
@@ -156,5 +164,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     INPUT_SEARCH.addEventListener("input", (e) => {
         filterBySearchQuery(PRODUCTS, e.target.value, ".products__area")
     })
-
 })
